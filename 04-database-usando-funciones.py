@@ -1,13 +1,16 @@
+# Este ejercicio usa todo lo anterior, pero vamos a encapsular algunos procesos en funciones 
+# que nos permitan gestionar el codigo de forma mas eficiente y escalable:
 users = {}
 id_num = 1
 
 while True:
-
+    # Las funciones que necesitamos deben incluirse en este punto para poder invocarlas mas 
+    # adelante en el codigo y se ejecuten sin mayor problemas, teniendo en cuenta que estamos 
+    # trabajando con bucles:
     def key_val(user_data):    
         for i in range(id_num):
             id_user = i
             users[username] = user
-                    #name = username
 
             user['id'] = id_user
             user['age'] = user_age
@@ -48,6 +51,8 @@ while True:
             key_val(users)
             show_user(users)
         
+        # Aqui simplificamos el uso de opciones usando sentencia if para validar continuidad 
+        # en vez de usar un match, dando el mismo resultado:
         opciones = input("¿Do you want to keep inputting users?: ")
         if opciones == "si":
             continue
